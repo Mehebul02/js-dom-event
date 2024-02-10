@@ -7,15 +7,26 @@
 </head>
 <body>
     <h1 id="welcome">Welcome to My Home</h1>
+    <!-- 1st option  -->
     <button id="btn-click" onclick="btnClick()">Click Me</button>
+
+<!-- 2nd option  -->
+    <button id="submit-btn">Submit</button>
 
 
     <script>
+        // 1st option 
         function btnClick(){
             const welCome = document.getElementById('welcome')
             welCome.style.color='red'
             welCome.innerText='Successful Submit'
         }
+        // 2nd option 
+        document.getElementById('submit-btn').addEventListener('click', function(){
+            const welUpdate =document.getElementById("welcome")
+            welUpdate.innerText='Update The Text Home Page'
+            welUpdate.style.color='green'
+        })
 
     </script>
 </body>
