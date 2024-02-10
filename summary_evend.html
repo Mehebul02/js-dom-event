@@ -21,6 +21,11 @@
     <input id="input-filed" type="text">
     <button id="btn-submit">Submit</button>
 
+    <!-- second input text  -->
+    <h1 id="input-title">Dafault Text Home</h1>
+    <input id="input-type" type="text">
+    <button id="click-submit">click Me</button>
+
     <script>
         // 1st option 
         function btnClick() {
@@ -46,6 +51,16 @@
             const display = document.getElementById('input-display')
             display.innerText = inputText
             inputFiled.value = ''
+        })
+        // second text 
+
+        document.getElementById('click-submit').addEventListener('click',function(){
+            const inputType =document.getElementById('input-type')
+            const inputText = inputType.value
+            const inputTitle =document.getElementById('input-title')
+            inputTitle.innerText=inputText
+            inputType.value=''
+            
         })
 
 
