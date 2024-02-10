@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summary With dom </title>
 </head>
+
 <body>
     <h1 id="welcome">Welcome to My Home</h1>
     <!-- 1st option  -->
     <button id="btn-click" onclick="btnClick()">Click Me</button>
 
-<!-- 2nd option  -->
+    <!-- 2nd option  -->
     <button id="submit-btn">Submit</button>
 
 
+    <!-- input text  -->
+    <h1 id="input-display">Please login</h1>
+    <input id="input-filed" type="text">
+    <button id="btn-submit">Submit</button>
+
     <script>
         // 1st option 
-        function btnClick(){
+        function btnClick() {
             const welCome = document.getElementById('welcome')
-            welCome.style.color='red'
-            welCome.innerText='Successful Submit'
+            welCome.style.color = 'red'
+            welCome.innerText = 'Successful Submit'
         }
         // 2nd option 
-        document.getElementById('submit-btn').addEventListener('click', function(){
-            const welUpdate =document.getElementById("welcome")
-            welUpdate.innerText='Update The Text Home Page'
-            welUpdate.style.color='green'
+        document.getElementById('submit-btn').addEventListener('click', function () {
+            const welUpdate = document.getElementById("welcome")
+            welUpdate.innerText = 'Update The Text Home Page'
+            welUpdate.style.color = 'green'
         })
+
+
+        // input text 
+
+        document.getElementById('btn-submit').addEventListener('click', function () {
+            const inputFiled = document.getElementById('input-filed')
+
+            const inputText = inputFiled.value;
+
+            const display = document.getElementById('input-display')
+            display.innerText = inputText
+            inputFiled.value = ''
+        })
+
+
 
     </script>
 </body>
+
 </html>
