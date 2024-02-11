@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h1>Exploring Bubble Event</h1>
+    <section id="section-content">
+        <ul id="list-ul">
+            <li id="item-1">Lorem ipsum ducimus explicabo veritatis vitae fugiat unde rem nihil magnam?</li>
+            <li id="item-2">Quidem quod maxime, tas praesentium eaque sint illo excepturi accusantium quam error fuga impedit.</li>
+            <li id="item-3">Consequatur unde repudiandae, sequi temporibus tempore quisquam soluta fuga aliquam accusamus, architecto earum voluptatem. Magni esse possimus expedita harum nostrum.</li>
+            <li id="item-4">Quisquam atque mollitia porro quidem id, sed incidunt? Accusantium explicabo nulla sit numquam tempora ut libero placeat ab illum cumque!</li>
+            <li id="item-5">Unde hic itaque molestias, eligendi, neque suscipit veritatis dolorum natus maiores ad accusamus mollitia quo nihil! Animi a voluptate ut.</li>
+            <li id="item-6">Hic ea excepturi aliquid aspernatur! Magni maiores porro sint reiciendis repellat officia voluptatem, praesentium et exercitationem, ut tenetur, natus ipsam.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById('item-2').addEventListener('click',function(){
+            console.log('tap 2 click')
+            
+        });
+        document.getElementById('list-ul').addEventListener('click',function(event){
+            console.log('Ul click')
+            event.stopPropagation()
+        });
+        document.getElementById('section-content').addEventListener('click',function(){
+            console.log('Section Click')
+        })
+    </script>
+</body>
+</html>
