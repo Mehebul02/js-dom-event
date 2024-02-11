@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add A New Comment</title>
+</head>
+<body>
+    <h1>Add A New Comment</h1>
+    <!-- <div id="commen-content" >
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a, ex nemo distinctio voluptate minus architecto eius, quod ratione illum cumque iusto? Eveniet non minus a dolorem perspiciatis quam perferendis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a, ex nemo distinctio voluptate minus architecto eius, quod ratione illum cumque iusto? Eveniet non minus a dolorem perspiciatis quam perferendis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi a, ex nemo distinctio voluptate minus architecto eius, quod ratione illum cumque iusto? Eveniet non minus a dolorem perspiciatis quam perferendis.</p>
+    </div>
+    <div>
+        <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        <br><br>
+    <button id="post-btn">Post</button>
+    </div>
+    
+<script>
+    // Step 1
+    document.getElementById('post-btn').addEventListener('click',function(){
+        // step 2
+        const textArea =document.getElementById('textarea')
+        const textInput =textArea.value;
+        // step 3 
+
+        const commentContent =document.getElementById('commen-content')
+        const p=document.createElement('p')
+        p.innerText=textInput;
+        commentContent.appendChild(p)
+
+    })
+</script> -->
+
+<div id="comment-content">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia cupiditate dolore itaque fuga? Consectetur sed aperiam officia amet veritatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia cupiditate dolore itaque fuga? Consectetur sed aperiam officia amet veritatis!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quia cupiditate dolore itaque fuga? Consectetur sed aperiam officia amet veritatis!</p>
+</div>
+<div>
+    <textarea name="" id="new-comment" cols="30" rows="5"></textarea>
+    <br><br>
+    <button id="post-btn">Post</button>
+</div>
+<script>
+    // step1
+    document.getElementById('post-btn').addEventListener('click',function(){
+        // step2
+        const newComment=document.getElementById('new-comment')
+        const newCommentText=newComment.value
+        // step3
+        const commentContent=document.getElementById('comment-content')
+        const p =document.createElement('p')
+        p.innerText=newCommentText;
+        commentContent.appendChild(p)
+        newComment.value=''
+
+       
+
+
+    })
+</script>
+</body>
+</html>

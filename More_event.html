@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event Dom</title>
+</head>
+<body>
+    <h1>More Event Collection</h1>
+    <button id="more-btn">More</button>
+
+
+    <input id="input-filed" type="text">
+
+
+    <script>
+
+        document.getElementById('input-filed').addEventListener('focus',function(){
+            console.log('asfhdakgcfsdfcf')
+        })
+        // document.getElementById('input-filed').addEventListener('blur',function(){
+        //     console.log('Blur hoise')
+        // })
+        // document.getElementById('input-filed').addEventListener('keypress',function(Event){
+        //     console.log(Event.target.value)
+        // })
+        document.getElementById('input-filed').addEventListener('keyup',function(Event){
+            console.log(Event.target.value)
+        })
+
+        document.getElementById('more-btn').addEventListener('mouseenter',function(){
+            console.log('Ami tour jabo nah')
+        })
+    </script>
+</body>
+</html>
